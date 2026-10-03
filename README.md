@@ -1,13 +1,15 @@
 <div align="center">
 
-# 📒 ADDRESS BOOK MANAGEMENT SYSTEM
+# 📒 Address Book Management System
 
 ### A Console-Based Contact Management Application in C
 
 <p>
-  <img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c" alt="C">
-  <img src="https://img.shields.io/badge/Compiler-GCC-orange?style=for-the-badge&logo=gnu" alt="GCC">
-  <img src="https://img.shields.io/badge/Platform-Linux-lightgrey?style=for-the-badge&logo=linux" alt="Linux">
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
+  <img src="https://img.shields.io/badge/GCC-Compiler-orange?style=for-the-badge&logo=gnu" alt="GCC">
+  <img src="https://img.shields.io/badge/Linux-Platform-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+  <img src="https://img.shields.io/badge/File%20Handling-00897B?style=for-the-badge" alt="File Handling">
+  <img src="https://img.shields.io/badge/Structures-455A64?style=for-the-badge" alt="Structures">
 </p>
 
 <p>
@@ -18,60 +20,69 @@
 
 ---
 
-## 📌 About the Project
+## 📑 Table of Contents
 
-**Address Book Management System** is a console-based application developed in **C** for managing contact information through a simple and interactive menu-driven interface.
-
-The application allows users to **create, search, edit, delete, and display contacts**, while also providing input validation for names, phone numbers, and email addresses.
-
-Contact data is stored using **file handling**, allowing the information to be loaded when the application starts and saved when the application exits.
-
----
-
-<div align="center">
-
-### ✨ Simple • Efficient • Modular • Beginner Friendly ✨
-
-</div>
-
----
-
-## 🚀 Features
-
-* ➕ Create a new contact
-* 🔍 Search contacts by:
-
-  * Name
-  * Phone number
-  * Email
-* ✏️ Edit existing contact details
-* 🗑️ Delete contacts with confirmation
-* 📋 Display all available contacts
-* 💾 Save contacts to a file
-* 📂 Load contacts automatically when the program starts
-* ✅ Name validation
-* ✅ Phone number validation
-* ✅ Duplicate phone number detection
-* ✅ Email validation
-* 📊 Supports up to **100 contacts**
+1. [Overview](#1-overview)
+2. [Key Features](#2-key-features)
+3. [Tech Stack](#3-tech-stack)
+4. [Project Structure](#4-project-structure)
+5. [Compilation & Execution](#5-compilation--execution)
+6. [Application Menu](#6-application-menu)
+7. [Contact Operations](#7-contact-operations)
+8. [Input Validation](#8-input-validation)
+9. [File Handling](#9-file-handling)
+10. [Program Flow](#10-program-flow)
+11. [C Concepts Demonstrated](#11-c-concepts-demonstrated)
+12. [Possible Improvements](#12-possible-improvements)
+13. [Author](#13-author)
 
 ---
 
-## 🛠️ Technologies Used
+# 1. Overview
 
-* **C Programming Language**
-* GCC Compiler
-* Structures
-* Functions
-* Pointers
-* Arrays
-* Strings
-* File Handling
-* Input Validation
+**Address Book Management System** is a console-based application developed in **C** for managing contact information through a menu-driven interface.
+
+The application provides functionality to **create, search, edit, delete, and display contacts**, with validation for names, phone numbers, and email addresses.
+
+Contact information is stored using **file handling**, allowing existing contacts to be loaded when the program starts and saved when the application exits.
 
 ---
 
-## 📂 Project Structure
+# 2. Key Features
+
+| Feature | Description |
+|---|---|
+| ➕ Create Contact | Add a new contact with name, phone number and email |
+| 🔍 Search Contact | Search by name, phone number or email |
+| ✏️ Edit Contact | Modify existing contact information |
+| 🗑️ Delete Contact | Remove contacts with confirmation |
+| 📋 List Contacts | Display all stored contacts in a formatted table |
+| 💾 File Storage | Save and load contacts using `contacts.txt` |
+| ✅ Input Validation | Validate names, phone numbers and email addresses |
+| 🔎 Duplicate Detection | Prevent duplicate phone numbers |
+| 📊 Contact Capacity | Supports up to 100 contacts |
+| 🧩 Modular Design | Contact and file operations separated into modules |
+
+---
+
+# 3. Tech Stack
+
+| Technology / Concept | Purpose |
+|---|---|
+| **C** | Core application development |
+| **GCC** | Compilation |
+| **Linux / Unix** | Development and execution environment |
+| **Structures** | Represent contacts and address-book data |
+| **Arrays** | Store multiple contacts |
+| **Pointers** | Data manipulation and function operations |
+| **Strings** | Contact information processing |
+| **File Handling** | Persistent contact storage |
+| **Input Validation** | Validate user-entered information |
+| **Modular Programming** | Separate contact and file-management logic |
+
+---
+
+# 4. Project Structure
 
 ```text
 AddressBook/
@@ -81,35 +92,37 @@ AddressBook/
 ├── contact.h
 ├── file.c
 ├── file.h
+├── contacts.txt
 └── README.md
 ```
 
-### File Description
+### File Responsibilities
 
-| File        | Description                                                                        |
-| ----------- | ---------------------------------------------------------------------------------- |
-| `main.c`    | Contains the main menu and program execution flow                                  |
-| `contact.c` | Implements contact creation, searching, editing, deletion, listing, and validation |
-| `contact.h` | Defines `Contact`, `AddressBook`, and function declarations                        |
-| `file.c`    | Handles saving and loading contacts                                                |
-| `file.h`    | Contains file-handling function declarations                                       |
-| `README.md` | Project documentation                                                              |
+| File | Responsibility |
+|---|---|
+| `main.c` | Main program flow and menu handling |
+| `contact.c` | Contact creation, search, editing, deletion, listing and validation |
+| `contact.h` | Contact/address-book structures and function declarations |
+| `file.c` | Saving and loading contact information |
+| `file.h` | File-handling function declarations |
+| `contacts.txt` | Persistent contact data |
+| `README.md` | Project documentation |
 
-> **Note:** `contacts.txt` is used by the application to store contact data and is generated/used during program execution.
+> `contacts.txt` is generated/used by the application during execution.
 
 ---
 
-## ⚙️ Compilation
+# 5. Compilation & Execution
 
 Make sure GCC is installed on your system.
 
-Compile all C source files using:
+## Compile
 
 ```bash
 gcc main.c contact.c file.c -o addressbook
 ```
 
-Run the program:
+## Run
 
 ```bash
 ./addressbook
@@ -124,7 +137,7 @@ gcc main.c contact.c file.c -o addressbook
 
 ---
 
-## 🖥️ Main Menu
+# 6. Application Menu
 
 When the application starts, the following menu is displayed:
 
@@ -145,21 +158,23 @@ When the application starts, the following menu is displayed:
 
 ---
 
-## 📌 Operations
+# 7. Contact Operations
 
-### 1. Create Contact
+## 7.1 Create Contact
 
-Creates a new contact by taking:
+Creates a new contact using:
 
-* Name
-* Phone number
-* Email address
+- Name
+- Phone number
+- Email address
 
-The project validates the entered information before adding the contact to the address book.
+The entered information is validated before the contact is added.
 
-A maximum of **100 contacts** can be stored.
+The application supports a maximum of **100 contacts**.
 
-### 2. Search Contact
+---
+
+## 7.2 Search Contact
 
 Contacts can be searched using:
 
@@ -169,11 +184,17 @@ Contacts can be searched using:
 3. EMAIL
 ```
 
-Searching by name can return matching contacts, while phone number and email searches identify the corresponding contact.
+| Search Method | Behaviour |
+|---|---|
+| **Name** | Finds matching contact names |
+| **Phone Number** | Identifies the corresponding contact |
+| **Email** | Identifies the corresponding contact |
 
-### 3. Edit Contact
+---
 
-An existing contact can be modified by selecting which field to update:
+## 7.3 Edit Contact
+
+Existing contact information can be modified by selecting the required field:
 
 ```text
 1. NAME
@@ -181,17 +202,21 @@ An existing contact can be modified by selecting which field to update:
 3. EMAIL
 ```
 
-The same validation rules are applied when entering updated information.
+The same validation rules are applied when updated information is entered.
 
-### 4. Delete Contact
+---
 
-The user selects a contact and receives a confirmation prompt before deletion.
+## 7.4 Delete Contact
 
-When a contact is deleted, the remaining contacts are shifted to maintain the address book structure.
+The user selects the contact to delete and receives a confirmation prompt.
 
-### 5. List All Contacts
+After deletion, the remaining contacts are shifted to maintain the address-book structure.
 
-Displays all contacts in a formatted table:
+---
+
+## 7.5 List All Contacts
+
+All stored contacts are displayed in a formatted table:
 
 ```text
 NO         NAME                      PHONE           EMAIL
@@ -201,45 +226,66 @@ NO         NAME                      PHONE           EMAIL
 ...
 ```
 
-The project formats the output into columns for easier readability.
-
-### 6. Exit
-
-Before exiting, the program saves the current contacts to `contacts.txt`.
+The formatted output makes the stored contact information easier to read.
 
 ---
 
-## ✅ Input Validation
+## 7.6 Exit
 
-### Name Validation
+Before exiting, the application saves the current contacts to:
 
-The name can contain alphabetic characters and spaces. Invalid characters are rejected.
+```text
+contacts.txt
+```
 
-### Phone Number Validation
+The saved information can then be loaded during the next program execution.
+
+---
+
+# 8. Input Validation
+
+The application validates user input before storing or updating contact information.
+
+## Name Validation
+
+Names can contain:
+
+- Alphabetic characters
+- Spaces
+
+Invalid characters are rejected.
+
+## Phone Number Validation
 
 The phone number:
 
-* Must contain exactly **10 digits**
-* Must contain only numeric characters
-* Must not already exist in another contact
+- Must contain exactly **10 digits**
+- Must contain only numeric characters
+- Must not already exist in another contact
 
-### Email Validation
+## Email Validation
 
 The email validation checks for:
 
-* `@`
-* `.`
-* Text before `@`
-* Valid text between `@` and `.`
-* Text after `.`
-* No spaces
-* Lowercase characters
+- `@`
+- `.`
+- Text before `@`
+- Valid text between `@` and `.`
+- Text after `.`
+- No spaces
+- Lowercase characters
 
 ---
 
-## 💾 File Handling
+# 9. File Handling
 
-The project uses `contacts.txt` to store contact information.
+The application uses:
+
+```text
+contacts.txt
+```
+
+to maintain contact information between program executions.
 
 Each contact is stored in the following format:
 
@@ -253,120 +299,137 @@ Example:
 Sohan,9765306823,sohan@gmail.com
 ```
 
-The program writes all contacts to the file when saving and reads them back when loading.
+### File Operations
 
----
+| Operation | Purpose |
+|---|---|
+| **Load** | Read existing contacts when the program starts |
+| **Save** | Write current contacts when the program exits |
 
-## 🔄 Program Flow
+The project uses standard C file-handling functions such as:
 
-```text
-             ┌─────────────────┐
-             │  Start Program  │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ Load Contacts   │
-             │ from contacts.txt│
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │   Display Menu  │
-             └────────┬────────┘
-                      │
-          ┌───────────┼───────────┐
-          │           │           │
-          ▼           ▼           ▼
-       Create      Search       Edit
-          │           │           │
-          └───────────┼───────────┘
-                      │
-          ┌───────────┴───────────┐
-          │                       │
-          ▼                       ▼
-       Delete                   List
-          │                       │
-          └───────────┬───────────┘
-                      │
-                      ▼
-                ┌───────────┐
-                │   Exit?   │
-                └─────┬─────┘
-                      │
-                     Yes
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ Save Contacts   │
-             │ to contacts.txt │
-             └────────┬────────┘
-                      │
-                      ▼
-                   Exit
+```c
+fopen()
+fclose()
+fprintf()
+fscanf()
 ```
 
 ---
 
-## 🧠 C Concepts Demonstrated
+# 10. Program Flow
 
-This project demonstrates practical usage of:
-
-* `struct`
-* Arrays of structures
-* Pointers
-* Functions
-* Header files
-* Function declarations
-* String manipulation
-* File handling
-* `fopen()`, `fclose()`
-* `fprintf()`, `fscanf()`
-* `strcmp()`, `strcpy()`, `strlen()`
-* Character validation using `ctype.h`
-* Menu-driven programming
-* Input validation
-* Modular programming
+```text
+              ┌─────────────────┐
+              │  Start Program  │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Load Contacts   │
+              │ from contacts.txt│
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │   Display Menu  │
+              └────────┬────────┘
+                       │
+          ┌────────────┼────────────┐
+          │            │            │
+          ▼            ▼            ▼
+       Create        Search        Edit
+          │            │            │
+          └────────────┼────────────┘
+                       │
+          ┌────────────┴────────────┐
+          │                         │
+          ▼                         ▼
+       Delete                      List
+          │                         │
+          └────────────┬────────────┘
+                       │
+                       ▼
+                ┌─────────────┐
+                │    Exit?    │
+                └──────┬──────┘
+                       │
+                      Yes
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Save Contacts   │
+              │ to contacts.txt │
+              └────────┬────────┘
+                       │
+                       ▼
+                     Exit
+```
 
 ---
 
-## 📈 Possible Future Improvements
+# 11. C Concepts Demonstrated
 
-Some possible enhancements for future versions:
+This project provides practical implementation of:
 
-* Sort contacts alphabetically
-* Add partial/substring search
-* Add multiple phone numbers per contact
-* Add contact groups/categories
-* Improve email validation
-* Add a graphical user interface
-* Add password protection
-* Export contacts to CSV
-* Add a database such as SQLite
-* Improve input handling and error recovery
+- `struct`
+- Arrays of structures
+- Pointers
+- Functions
+- Header files
+- Function declarations
+- String manipulation
+- File handling
+- `fopen()` and `fclose()`
+- `fprintf()` and `fscanf()`
+- `strcmp()`
+- `strcpy()`
+- `strlen()`
+- Character validation using `ctype.h`
+- Menu-driven programming
+- Input validation
+- Modular programming
 
 ---
 
-## 🎯 Learning Objective
+# 12. Possible Improvements
 
-The main objective of this project is to build a practical application using fundamental and intermediate **C programming concepts**, particularly **structures, functions, pointers, strings, file handling, and modular programming**.
+Future versions could include:
+
+- Alphabetical contact sorting
+- Partial / substring search
+- Multiple phone numbers per contact
+- Contact groups or categories
+- Improved email validation
+- Graphical user interface
+- Password protection
+- CSV export
+- SQLite database support
+- Improved input handling and error recovery
 
 ---
 
-## 👨‍💻 Author
+# 13. Author
 
 <div align="center">
 
-### **Sohan**
+### **Sohan K**
 
-⭐ If you found this project useful, consider giving the repository a star!
+**Embedded Systems & IoT Developer**
+
+<p>
+  <a href="https://github.com/sohan2277">
+    <img src="https://img.shields.io/badge/GitHub-sohan2277-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+  <a href="https://www.linkedin.com/in/sohan2277/">
+    <img src="https://img.shields.io/badge/LinkedIn-Sohan%20K-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</p>
 
 </div>
 
 ---
 
-<div align="center">
-
-**📒 Address Book Management System • Built with C**
-
-</div>
+<p align="center">
+  <b>📒 C • Data Structures • File Handling • Modular Programming</b>
+</p>
